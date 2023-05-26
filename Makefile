@@ -17,3 +17,6 @@ package-install:
 package-install:
 	    poetry build
 	        pip install --user dist/*.whl
+
+lint: 
+	poetry run flake8 brain_games
