@@ -6,7 +6,6 @@ import prompt
 def welcome_user():
     print("Welcome to the Brain Games!")
 
-
 def game():
     numbers = []
     len_of_list = random.randint(5, 10)
@@ -29,7 +28,7 @@ def game():
         print('Correct!')
         return True
     else:
-        print(user_input1 + ' is wrong answer ;(. Correct answer was ' + str(i) + ". Let's try again!")
+        print(user_input1 + ' is wrong answer ;(. Correct answer was ' + str(i) + ". Let's try again!" + name + '!')
         return False
 
 
@@ -38,7 +37,6 @@ def main():
     name = prompt.string("May I have your name? ")
     print(f"Hello, {name}!")
     print('What number is missing in the progression?')
-
     correct_answers = 0
     total_questions = 3
 
