@@ -12,7 +12,7 @@ def is_prime(n):  # Проверяет является ли число прос
     return True
 
 
-def generate_prime():
+def generate_prime(name):
         num = random.randint(2, 10)  # Генерируйте числа в нужном диапазоне
         print(f'Question: {num}')
         user_input1 = input("Your answer: ")
@@ -21,10 +21,10 @@ def generate_prime():
         if is_prime(num) is False and user_input1.lower() == 'no':
             print('Correct!')
         if is_prime(num) is False and user_input1.lower() == 'yes':
-            print(user_input1 + " is wrong answer ;(. Correct answer was 'yes'.Let s try again!")
+            print(user_input1 + " is wrong answer ;(. Correct answer was 'yes'.Let s try again, " + name + '!')
             return False
         if is_prime(num) is True and user_input1.lower() == 'no':
-            print(user_input1 + " is wrong answer ;(. Correct answer was 'yes'.Let s try again!")
+            print(user_input1 + " is wrong answer ;(. Correct answer was 'yes'.Let s try again, " + name + '!')
             return False
 
 
@@ -37,7 +37,7 @@ def main():
     for_congratulations_num_2 = 3
     for _ in range(3):
         for_congratulations += 1
-        if generate_prime() is False:
+        if generate_prime(name) is False:
             break
         else:
             continue

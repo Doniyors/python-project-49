@@ -6,7 +6,7 @@ import prompt
 def welcome_user():
     print("Welcome to the Brain Games!")
 
-def game():
+def game(name):
     numbers = []
     len_of_list = random.randint(5, 10)
     index_to_replace = random.randint(0, len_of_list - 1)
@@ -28,7 +28,7 @@ def game():
         print('Correct!')
         return True
     else:
-        print(user_input1 + ' is wrong answer ;(. Correct answer was ' + str(i) + ". Let's try again!" + name + '!')
+        print(user_input1 + ' is wrong answer ;(. Correct answer was ' + str(i) + ". Let's try again" + name + '!')
         return False
 
 
@@ -41,7 +41,7 @@ def main():
     total_questions = 3
 
     while correct_answers < total_questions:
-        if game():
+        if game(name):
             correct_answers += 1
         else:
             break

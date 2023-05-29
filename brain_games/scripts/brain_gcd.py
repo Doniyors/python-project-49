@@ -22,9 +22,9 @@ def main():
         if int(user_input1) == maximum:
             print('Correct!')
         else:
-            print(user_input1 + ' is wrong answer ;(. Correct answer was ' + str(maximum) + ".Let's try again," + name)
+            print(user_input1 + ' is wrong answer ;(. Correct answer was ' + str(maximum) + ".Let's try again, " + name + '!')
             return
-    print('Congratulations, ' + name)
+    print('Congratulations, ' + name + '!')
 
 
 if __name__ == '__main__':

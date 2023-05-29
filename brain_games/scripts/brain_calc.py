@@ -42,7 +42,7 @@ def main():
         else:
             print(user_input1 + ' is wrong answer ;(. Correct answer was ' + str(i2) + ".Let's try again," + name + '!')
             return
-    print('Congratulation, ' + name)
+    print('Congratulation, ' + name + '!')
 
 
 if __name__ == '__main__':
