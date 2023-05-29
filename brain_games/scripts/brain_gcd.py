@@ -16,13 +16,13 @@ def main():
         i1 = (random.randint(1, 100))
         #   minimum = min(i, i1)
         maximum = max(i, i1)
-        print('Which number is greater?')
+        print('Find the greatest common divisor of given numbers')
         print(f'Question: {i} {i1}')
         user_input1 = input("Your answer: ")
         if int(user_input1) == maximum:
             print('Correct!')
         else:
-            print(user_input1 + ' is wrong answer ;(. Correct answer was ' + str(maximum) + ".Let's try again, " + name + '!')
+            print(f"'{user_input1}' is wrong answer ;(. Correct answer was '{str(maximum)}'. Let's try again, {name}!")
             return
     print('Congratulations, ' + name + '!')
 
