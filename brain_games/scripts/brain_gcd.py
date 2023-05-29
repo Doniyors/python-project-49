@@ -16,7 +16,7 @@ def main():
         i1 = (random.randint(1, 100))
         #   minimum = min(i, i1)
         maximum = max(i, i1)
-        print('Find the greatest common divisor of given numbers')
+        print('Find the greatest common divisor of given numbers.')
         print(f'Question: {i} {i1}')
         user_input1 = input("Your answer: ")
         if int(user_input1) == maximum:
