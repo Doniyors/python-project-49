@@ -19,7 +19,7 @@ def game(name):
         numbers.append(new_number)
     i = numbers[index_to_replace]
     numbers[index_to_replace] = '..'
-    text = 'Question: '
+    text = 'Question:'
     for num in numbers:
         text += f' {str(num) }'
     print(text)
