@@ -20,10 +20,6 @@ def main():
         number1 = random.randint(1, 100)
         number2 = random.randint(1, 100)
         gcd = find_gcd(number1, number2)
-        #i = (random.randint(1, 100))
-        #i1 = (random.randint(1, 100))
-        #   minimum = min(i, i1)
-        #   maximum = max(i, i1)
         print(f'Question: {number1} {number2}')
         user_input1 = input("Your answer: ")
         if int(user_input1) == gcd:

@@ -6,6 +6,7 @@ import prompt
 def welcome_user():
     print("Welcome to the Brain Games!")
 
+
 def game(name):
     numbers = []
     len_of_list = random.randint(5, 10)
