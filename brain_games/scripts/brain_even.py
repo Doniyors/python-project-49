@@ -15,41 +15,44 @@ def main():
     question3 = 7
     print(f'Question: {question1}')
     user_input1 = input("Your answer: ")
-    result = check_answer1(user_input1)
+    result = check_answer1(user_input1, name)
     print(result)
     if 'wrong answer' in result:
         return                                                         
     print(f'Question: {question2}')
     user_input2 = input("Your answer: ")
-    result = check_answer2(user_input2)
+    result = check_answer2(user_input2, name)
     print(result)
     if 'wrong answer' in result:
         return
     print(f'Question: {question3}')
     user_input3 = input("Your answer: ")
-    result = check_answer3(user_input3)
-    print(result)    
+    result = check_answer3(user_input3, name)
+    print(result)
+    if result == 'Correct!':
+        print('Congratulations ' + name + '!')
 
 
-def check_answer1(answer):
+def check_answer1(answer, name):
     if answer.lower() == "no":
         return f'Correct!'
     elif answer.lower() == "yes":
-        return f"'yes' is wrong answer ;(. Correct answer was 'no'. Let's try again,"
+        return f"'yes' is wrong answer ;(. Correct answer was 'no'. Let's try again, {name}"
 
 
-def check_answer2(answer):
+def check_answer2(answer, name):
     if answer.lower() == "yes":
         return f'Correct!'
     elif answer.lower() == "no":
         return f"'no' is wrong answer ;(. Correct answer was 'yes'. Let's try again, {name}"
 
 
-def check_answer3(answer):
+def check_answer3(answer, name):
     if answer.lower() == "no":
         return f'Correct!'
     elif answer.lower() == "yes":
         return f"'yes' is wrong answer ;(. Correct answer was 'no'. Let's try again, {name}"
+
 
 if __name__ == '__main__':
     main()
