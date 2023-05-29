@@ -8,8 +8,8 @@ def main():
     name = prompt.string("May I have your name? ")
     print(f"Hello, {name}!")
     text1 = 'What is the result of the expression?'
-    text2 = 'what is the result of the subtraction?'
-    text3 = 'What is result of multiplication?'
+    #text2 = 'What is the result of the expression?'
+    #text3 = 'What is the result of the expression?'
     operations = ['+', '-', '*']
     for _ in range(3):  # цикл повторяется 3 раза
         i = (random.randint(1, 100))
@@ -20,10 +20,10 @@ def main():
         operation = random.choice(operations)
         if operation == '+':
             print(f'{text1}')
-        elif operation == '-':
-            print(f'{text2}')
-        elif operation == '*':
-            print(f'{text3}')
+        #elif operation == '-':
+            #print(f'{text2}')
+        #elif operation == '*':
+            #print(f'{text3}')
         print(f'Question: {i} {operation} {i1}')
         user_input1 = input("Your answer: ")
         if operation == '+':
