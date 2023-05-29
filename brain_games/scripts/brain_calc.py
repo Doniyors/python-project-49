@@ -7,7 +7,8 @@ def main():
     print("Welcome to the Brain Games!")
     name = prompt.string("May I have your name? ")
     print(f"Hello, {name}!")
-    text1 = 'What is the result of the expression?'
+    print('What is the result of the expression?')
+    #text1 = 'What is the result of the expression?'
     #text2 = 'What is the result of the expression?'
     #text3 = 'What is the result of the expression?'
     operations = ['+', '-', '*']
@@ -18,8 +19,8 @@ def main():
             i = random.randint(1, 100)
             i1 = random.randint(1, 100)
         operation = random.choice(operations)
-        if operation == '+':
-            print(f'{text1}')
+        #if operation == '+':
+            #print(f'{text1}')
         #elif operation == '-':
             #print(f'{text2}')
         #elif operation == '*':
