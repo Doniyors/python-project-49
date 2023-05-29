@@ -6,6 +6,7 @@ import prompt
 def main():
     print("Welcome to the Brain Games!")
     name = prompt.string("May I have your name? ")
+    print(f"Hello, {name}!")
     text1 = 'What is the result of the expression?'
     text2 = 'what is the result of the subtraction?'
     text3 = 'What is result of multiplication?'
