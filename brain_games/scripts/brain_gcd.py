@@ -17,8 +17,8 @@ def main():
         #   minimum = min(i, i1)
         maximum = max(i, i1)
         print('Which number is greater?')
-        print(f'{i} {i1}')
-        user_input1 = input("Введите ваш ответ: ")
+        print(f'Question: {i} {i1}')
+        user_input1 = input("Your answer: ")
         if int(user_input1) == maximum:
             print('Correct!')
         else:

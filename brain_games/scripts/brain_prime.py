@@ -3,7 +3,7 @@ import random
 import prompt
 
 
-def is_prime(n): # Проверяет является ли число простым или нет
+def is_prime(n):  # Проверяет является ли число простым или нет
     if n < 2:
         return False
     for i in range(2, int(n**0.5) + 1):
@@ -16,14 +16,14 @@ def generate_prime():
         num = random.randint(2, 10)  # Генерируйте числа в нужном диапазоне
         print(f'Question: {num}')
         user_input1 = input("Your answer: ")
-        if is_prime(num) == True and user_input1.lower() == 'yes':
+        if is_prime(num) is True and user_input1.lower() == 'yes':
             print('Correct!')
-        if is_prime(num) == False and user_input1.lower() == 'no':
+        if is_prime(num) is False and user_input1.lower() == 'no':
             print('Correct!')
-        if is_prime(num) == False and user_input1.lower() == 'yes':
+        if is_prime(num) is False and user_input1.lower() == 'yes':
             print(user_input1 + " is wrong answer ;(. Correct answer was 'yes'.Let s try again!")
             return False
-        if is_prime(num) == True and user_input1.lower() == 'no':
+        if is_prime(num) is True and user_input1.lower() == 'no':
             print(user_input1 + " is wrong answer ;(. Correct answer was 'yes'.Let s try again!")
             return False
 
@@ -37,13 +37,13 @@ def main():
     for_congratulations_num_2 = 3
     for _ in range(3):
         for_congratulations += 1
-        if generate_prime() == False:
+        if generate_prime() is False:
             break
         else:
             continue
 
     if for_congratulations == for_congratulations_num_2:
         print("Congratulations, " + name + '!')
-    
+
 if __name__ == '__main__':
     main()
