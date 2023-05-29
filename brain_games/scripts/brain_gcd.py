@@ -6,10 +6,12 @@ import prompt
 def welcome_user():
     print("Welcome to the Brain Games!")
 
+
 def find_gcd(a, b):
     while b != 0:
         a, b = b, a % b
     return a
+
 
 def main():
     welcome_user()
@@ -28,7 +30,6 @@ def main():
             print(f"'{user_input1}' is wrong answer ;(. Correct answer was '{str(gcd)}'. Let's try again, {name}!")
             return
     print('Congratulations, ' + name + '!')
-
 
 
 if __name__ == '__main__':

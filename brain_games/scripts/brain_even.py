@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import prompt
 
+
 def welcome_user():
     print("Welcome to the Brain Games!")
 
@@ -18,7 +19,7 @@ def main():
     result = check_answer1(user_input1, name)
     print(result)
     if 'wrong answer' in result:
-        return                                                         
+        return
     print(f'Question: {question2}')
     user_input2 = input("Your answer: ")
     result = check_answer2(user_input2, name)
