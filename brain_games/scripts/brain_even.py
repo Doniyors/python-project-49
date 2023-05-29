@@ -30,7 +30,7 @@ def main():
     result = check_answer3(user_input3, name)
     print(result)
     if result == 'Correct!':
-        print('Congratulations ' + name + '!')
+        print('Congratulations, ' + name + '!')
 
 
 def check_answer1(answer, name):
