@@ -28,7 +28,7 @@ def game(name):
         print('Correct!')
         return True
     else:
-        print(user_input1 + ' is wrong answer ;(. Correct answer was ' + str(i) + ". Let's try again" + name + '!')
+        print(user_input1 + ' is wrong answer ;(. Correct answer was ' + str(i) + ". Let's try again, " + name + '!')
         return False
 
 
