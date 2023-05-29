@@ -42,7 +42,7 @@ def main():
         if int(user_input1) == expected_result:
             print('Correct!')
         else:
-            print(user_input1 + ' is wrong answer ;(. Correct answer was ' + str(i2) + ".Let's try again," + name + '!')
+            print(f"'{str(user_input1)}' is wrong answer ;(. Correct answer was '{str(i2)}'. Let's try again, {name}!")
             return
     print('Congratulations, ' + name + '!')
 
