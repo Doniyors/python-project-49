@@ -36,5 +36,7 @@ def main():
             print(f"'{str(user_input1)}' is wrong answer ;(. Correct answer was '{str(i2)}'. Let's try again, {name}!")
             return
     print('Congratulations, ' + name + '!')
+
+
 if __name__ == '__main__':
     main()
