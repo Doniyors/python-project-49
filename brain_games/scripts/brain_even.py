@@ -36,21 +36,21 @@ def main():
 
 def check_answer1(answer, name):
     if answer.lower() == "no":
-        return f'Correct!'
+        print('Correct!')
     elif answer.lower() == "yes":
         return f"'yes' is wrong answer ;(. Correct answer was 'no'. Let's try again, {name}!"
 
 
 def check_answer2(answer, name):
     if answer.lower() == "yes":
-        return f'Correct!'
+        print('Correct!')
     elif answer.lower() == "no":
         return f"'no' is wrong answer ;(. Correct answer was 'yes'. Let's try again, {name}!"
 
 
 def check_answer3(answer, name):
     if answer.lower() == "no":
-        return f'Correct!'
+        print('Correct!')
     elif answer.lower() == "yes":
         return f"'yes' is wrong answer ;(. Correct answer was 'no'. Let's try again, {name}!"
 
