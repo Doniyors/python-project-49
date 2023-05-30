@@ -11,48 +11,26 @@ def main():
     name = prompt.string("May I have your name? ")
     print(f"Hello, {name}!")
     print('Answer "yes" if the number is even, otherwise answer "no".')
-    question1 = 15
-    question2 = 6
-    question3 = 7
-    print(f'Question: {question1}')
-    user_input1 = input("Your answer: ")
-    result = check_answer1(user_input1, name)
-    print(result)
-    if 'wrong answer' in result:
-        return
-    print(f'Question: {question2}')
-    user_input2 = input("Your answer: ")
-    result = check_answer2(user_input2, name)
-    print(result)
-    if 'wrong answer' in result:
-        return
-    print(f'Question: {question3}')
-    user_input3 = input("Your answer: ")
-    result = check_answer3(user_input3, name)
-    print(result)
-    if result == 'Correct!':
-        print('Congratulations, ' + name + '!')
+    questions = [15, 6, 7]
+
+    for question in questions:
+        print(f'Question: {question}')
+        user_input = input("Your answer: ")
+        result = check_answer(user_input, question, name)
+        print(result)
+        if 'wrong answer' in result:
+            return
+
+    print('Congratulations, ' + name + '!')
 
 
-def check_answer1(answer, name):
-    if answer.lower() == "no":
-        print('Correct!')
-    elif answer.lower() == "yes":
-        return f"'yes' is wrong answer ;(. Correct answer was 'no'. Let's try again, {name}!"
-
-
-def check_answer2(answer, name):
-    if answer.lower() == "yes":
-        print('Correct!')
-    elif answer.lower() == "no":
-        return f"'no' is wrong answer ;(. Correct answer was 'yes'. Let's try again, {name}!"
-
-
-def check_answer3(answer, name):
-    if answer.lower() == "no":
-        print('Correct!')
-    elif answer.lower() == "yes":
-        return f"'yes' is wrong answer ;(. Correct answer was 'no'. Let's try again, {name}!"
+def check_answer(answer, question, name):
+    if answer.lower() == "no" and question % 2 != 0:
+        return 'Correct!'
+    elif answer.lower() == "yes" and question % 2 == 0:
+        return 'Correct!'
+    else:
+        return f"'{answer}' is wrong answer ;(. Correct answer was {'no' if question % 2 != 0 else 'yes'}. Let's try again, {name}!"
 
 
 if __name__ == '__main__':
