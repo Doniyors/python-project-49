@@ -24,13 +24,14 @@ def game(name):
     for num in numbers:
         text += f' {str(num) }'
     print(text)
-    i5 = input("Your answer: ")
-    if int(i5) == i:
+    user_input1 = input("Your answer: ")
+    if int(user_input1) == i:
         print('Correct!')
         return True
     else:
-        return f"""'{i5}' is wrong answer ;(. Correct answer was '{str(i)}'.
-Let's try again, {name}!"""
+        print(f"""'{user_input1}' is wrong answer ;(. Correct answer was '{str(i)}'.
+Let's try again, {name}!""")
+        return False
 
 
 def main():
