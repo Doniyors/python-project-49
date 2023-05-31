@@ -21,10 +21,12 @@ def generate_prime(name):
     if is_prime(num) is False and user_input1.lower() == 'no':
         print('Correct!')
     if is_prime(num) is False and user_input1.lower() == 'yes':
-        print(f"'{user_input1}' is wrong answer ;(. Correct answer was 'yes'. Let's try again, {name}!")
+        print(f"'{user_input1}' is wrong answer ;(.")
+        print(f"Correct answer was 'yes'. Let's try again, {name}!")
         return False
     if is_prime(num) is True and user_input1.lower() == 'no':
-        print(f"'{user_input1}' is wrong answer ;(. Correct answer was 'yes'. Let's try again, {name}!")
+        print(f"'{user_input1}' is wrong answer ;(.")
+        print(f"Correct answer was 'yes'. Let's try again, {name}!")
         return False
 
 

@@ -30,7 +30,9 @@ def check_answer(answer, question, name):
     elif answer.lower() == "yes" and question % 2 == 0:
         return 'Correct!'
     else:
-        return f"'{answer}' is wrong answer ;(. Correct answer was {'no' if question % 2 != 0 else 'yes'}. Let's try again, {name}!"
+        print(f"'{answer}' is wrong answer ;(.")
+        print(f"Correct answer was {'no' if question % 2 != 0 else 'yes'}.")
+        print(f"Let's try again, {name}!")
 
 
 if __name__ == '__main__':

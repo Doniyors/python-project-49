@@ -27,7 +27,8 @@ def main():
         if int(user_input1) == gcd:
             print('Correct!')
         else:
-            print(f"'{user_input1}' is wrong answer ;(. Correct answer was '{str(gcd)}'. Let's try again, {name}!")
+            print(f"'{user_input1}' is wrong answer ;(.")
+            print(f"Correct answer was '{str(gcd)}'. Let's try again, {name}!")
             return
     print('Congratulations, ' + name + '!')
 

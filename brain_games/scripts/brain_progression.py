@@ -29,7 +29,8 @@ def game(name):
         print('Correct!')
         return True
     else:
-        print(f"{user_input1} is wrong answer ;(. Correct answer was {str(i)}. Let's try again, {name}!")
+        print(f"{user_input1} is wrong answer ;(.")
+        print(f"Correct answer was {str(i)}. Let's try again, {name}!")
         return False
 
 
