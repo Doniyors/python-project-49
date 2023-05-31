@@ -18,9 +18,8 @@ def main():
         user_input = input("Your answer: ")
         result = check_answer(user_input, question, name)
         print(result)
-        if 'wrong answer' in result:
+        if result != 'Correct!':
             return
-
     print('Congratulations, ' + name + '!')
 
 
@@ -29,10 +28,12 @@ def check_answer(answer, question, name):
         return 'Correct!'
     elif answer.lower() == "yes" and question % 2 == 0:
         return 'Correct!'
-    else:
-        print(f"'{answer}' is wrong answer ;(.")
-        print(f"Correct answer was {'no' if question % 2 != 0 else 'yes'}.")
-        print(f"Let's try again, {name}!")
+    elif answer.lower() == "no" and question % 2 == 0:
+        return f"""'{answer}' is wrong answer ;(. Correct answer was 'yes'.
+Let's try again, {name}!"""
+    elif answer.lower() == "yes" and question % 2 != 0:
+        return f"""'{answer}' is wrong answer ;(. Correct answer was 'yes'.
+Let's try again, {name}!"""
 
 
 if __name__ == '__main__':
