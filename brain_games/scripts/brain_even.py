@@ -11,27 +11,27 @@ def main():
     name = prompt.string("May I have your name? ")
     print(f"Hello, {name}!")
     print('Answer "yes" if the number is even, otherwise answer "no".')
-    questions = [15, 6, 7]
+    list_of_num = [15, 6, 7]
 
-    for question in questions:
-        print(f'Question: {question}')
+    for i in list_of_num:
+        print(f'Question: {i}')
         user_input = input("Your answer: ")
-        result = check_answer(user_input, question, name)
+        result = check_answer(user_input, i, name)
         print(result)
         if result != 'Correct!':
             return
     print('Congratulations, ' + name + '!')
 
 
-def check_answer(answer, question, name):
-    if answer.lower() == "no" and question % 2 != 0:
+def check_answer(answer, i, name):
+    if answer.lower() == "no" and i % 2 != 0:
         return 'Correct!'
-    elif answer.lower() == "yes" and question % 2 == 0:
+    elif answer.lower() == "yes" and i % 2 == 0:
         return 'Correct!'
-    elif answer.lower() == "no" and question % 2 == 0:
+    elif answer.lower() == "no" and i % 2 == 0:
         return f"""'{answer}' is wrong answer ;(. Correct answer was 'yes'.
 Let's try again, {name}!"""
-    elif answer.lower() == "yes" and question % 2 != 0:
+    elif answer.lower() == "yes" and i % 2 != 0:
         return f"""'{answer}' is wrong answer ;(. Correct answer was 'yes'.
 Let's try again, {name}!"""
 

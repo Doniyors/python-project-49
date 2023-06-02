@@ -4,21 +4,21 @@ import prompt
 
 
 def generate_numbers():
-    num1 = random.randint(1, 100)
-    num2 = random.randint(1, 100)
-    while num1 >= num2:
-        num1 = random.randint(1, 100)
-        num2 = random.randint(1, 100)
-    return num1, num2
+    random_num1 = random.randint(1, 100)
+    random_num2 = random.randint(1, 100)
+    while random_num1 >= random_num2:
+        random_num1 = random.randint(1, 100)
+        random_num2 = random.randint(1, 100)
+    return random_num1, random_num2
 
 
-def calculate_result(num1, num2, operation):
+def calculate_result(random_num1, random_num2, operation):
     if operation == '+':
-        return num1 + num2
+        return random_num1 + random_num2
     elif operation == '-':
-        return num1 - num2
+        return random_num1 - random_num2
     elif operation == '*':
-        return num1 * num2
+        return random_num1 * random_num2
 
 
 def main():
@@ -29,11 +29,11 @@ def main():
 
     operations = ['+', '-', '*']
     for _ in range(3):
-        num1, num2 = generate_numbers()
+        random_num1, random_num2 = generate_numbers()
         operation = random.choice(operations)
-        question = f"Question: {num1} {operation} {num2}"
+        question = f"Question: {random_num1} {operation} {random_num2}"
         user_answer = prompt.string(question + "\nYour answer: ")
-        expected_result = calculate_result(num1, num2, operation)
+        expected_result = calculate_result(random_num1, random_num2, operation)
 
         if int(user_answer) == expected_result:
             print("Correct!")

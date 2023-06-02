@@ -18,7 +18,7 @@ def game(name):
         previous_number = numbers[-1]
         new_number = previous_number + number_to_join
         numbers.append(new_number)
-    i = numbers[index_to_replace]
+    i = numbers[index_to_replace]  # Значение которое нужно угадать
     numbers[index_to_replace] = '..'
     text = 'Question:'
     for num in numbers:

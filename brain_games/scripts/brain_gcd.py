@@ -7,7 +7,7 @@ def welcome_user():
     print("Welcome to the Brain Games!")
 
 
-def find_gcd(a, b):
+def find_gcd(a, b):  # Находит самое большую цифру на которую делятся оба числа
     while b != 0:
         a, b = b, a % b
     return a
@@ -19,10 +19,10 @@ def main():
     print(f"Hello, {name}!")
     print('Find the greatest common divisor of given numbers.')
     for _ in range(3):
-        number1 = random.randint(1, 100)
-        number2 = random.randint(1, 100)
-        gcd = find_gcd(number1, number2)
-        print(f'Question: {number1} {number2}')
+        random_number1 = random.randint(1, 100)
+        random_number2 = random.randint(1, 100)
+        gcd = find_gcd(random_number1, random_number2)
+        print(f'Question: {random_number1} {random_number2}')
         user_input1 = input("Your answer: ")
         if int(user_input1) == gcd:
             print('Correct!')
