@@ -1,10 +1,29 @@
 ### Hexlet tests and linter status:
+
 [![Actions Status](https://github.com/Doniyors/python-project-49/workflows/hexlet-check/badge.svg)](https://github.com/Doniyors/python-project-49/actions)
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/57ecaadb4a2caeafc3bf/maintainability)](https://codeclimate.com/github/Doniyors/python-project-49/maintainability) 
-Ссылка на asciinema 1 игра(yes or no): https://asciinema.org/a/1c5FNx9gYpJgYvz9tf3BmU2TT
-Ссылка на asciinema 2 игра(калькулятор): https://asciinema.org/a/YUcVeICjCJp9IrIUGycFvQuew
-Ссылка на asciinema 3 игра(НДО): https://asciinema.org/a/9DgUWCCH7uFPxg1XsO2BrHu4j
-Ссылка на asciinema 4 игры(арифметическая прогрессия): https://asciinema.org/a/9lVgOPCWBzGGeCX8iWb6NPuFv
-Ссылка на asciinema 5 игры(простое число или нет): https://asciinema.org/a/rrmZY2526EH16lHYXcZVlfmd8
+[![Maintainability](https://api.codeclimate.com/v1/badges/57ecaadb4a2caeafc3bf/maintainability)](https://codeclimate.com/github/Doniyors/python-project-49/maintainability)
 
+Добро пожаловать в игру brain_games (игры разума) которая состоит из 5 разных игр.
+
+Установка:
+
+Для установки игры нужно перейте в репозиторий проекта по ссылку: https://github.com/Doniyors/python-project-49 и клонировать его в свой компьютер с помощью команды git clone.
+
+Описание:
+
+Первая игра называется «Проверка на чётность». Суть игры в следующем: пользователю показывается случайное число.
+И ему нужно ответить yes, если число чётное, или no — если нечётное. Для запуска этой игры достаточно перейти в головную директорию проекта и ввести команду brain-even
+
+Вторая игра называется «Калькулятор» Суть игры в следующем: пользователю показывается случайное математическое выражение, например, 35 + 16, которое нужно вычислить и записать правильный ответ. Для запуска этой игры достаточно перейти в головную директорию проекта и ввести команду brain-calc
+
+Третья игра называется «Наибольший общий делитель (НОД)». Суть игры в следующем: пользователю показывается два случайных числа, например, 25 50. Пользователь должен вычислить и ввести наибольший общий делитель этих чисел. Для запуска этой игры достаточно перейти в головную директорию проекта и ввести команду brain-gcd.
+
+Четвёртая игра называется «Арифметическая прогрессия». Суть игры в следующем: показываем игроку ряд чисел, который образует арифметическую прогрессию, заменив любое из чисел двумя точками. Игрок должен определить это число. Для запуска этой игры достаточно перейти в головную директорию проекта и ввести команду brain-progression.
+
+Пятая игра называется «Простое ли число?». Суть игры в том чтобы определить является ли число простым и ответить yes или no. Для запуска этой игры достаточно перейти в головную директорию проекта и ввести команду brain-prime.
+
+Asciinema:
+
+Чтобы посмотреть как все игры работают нудно перейти в директорию /python-project-49 с помощью команды cd /python-project-49 и активировать файл tmp5_nxvpjg-ascii.cast
+с помощью команды asciinema play tmp5_nxvpjg-ascii.cast
