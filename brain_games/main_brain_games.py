@@ -50,10 +50,8 @@ if __name__ == '__main__':
     main1()
 
 
-#  def welcome_user():
-    #  print("Welcome to the Brain Games!")
-
-
+def welcome_user():
+    print("Welcome to the Brain Games!")
 def main2():
     welcome_user()
     name = prompt.string("May I have your name? ")
@@ -88,8 +86,8 @@ if __name__ == '__main__':
     main2()
 
 
-#  def welcome_user():
-    #  print("Welcome to the Brain Games!")
+def welcome_user():
+    print("Welcome to the Brain Games!")
 
 
 def find_gcd(a, b):  # Находит самое большую цифру на которую делятся оба числа
