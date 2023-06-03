@@ -50,8 +50,6 @@ if __name__ == '__main__':
     main1()
 
 
-def welcome_user():
-    print("Welcome to the Brain Games!")
 def main2():
     welcome_user()
     name = prompt.string("May I have your name? ")
@@ -167,10 +165,6 @@ def main4():
 
 if __name__ == '__main__':
     main4()
-
-
-def welcome_user():
-    print("Welcome to the Brain Games!")
 
 
 def game(name):
