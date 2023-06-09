@@ -18,12 +18,12 @@ prompt = "^0.4.1"
 pytest = "^7.3.1"
 
 [tool.poetry.scripts]
-brain-games = "brain_games.brain_file:main_games"
-brain-calc = "brain_games.brain_file:main_calc"
-brain-prime = "brain_games.brain_file:main_prime"
-brain-progression = "brain_games.brain_file:main_progression"
-brain-even = "brain_games.brain_file:main_even"
-brain-gcd = "brain_games.brain_file:main_gcd"
+brain-calc = "brain_games.brain_file:main ['brain-calc']"
+brain-prime = "brain_games.brain_file:main ['brain-prime']"
+brain-progression = "brain_games.brain_file:main ['brain-progression']"
+brain-games = "brain_games.brain_file:main ['brain-games']"
+brain-even = "brain_games.brain_file:main ['brain-even']"
+brain-gcd = "brain_games.brain_file:main ['brain-gcd']"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^6.0.0"
