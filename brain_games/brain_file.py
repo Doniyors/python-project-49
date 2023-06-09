@@ -1,10 +1,14 @@
 import sys
+from brain_games.games.brain_games import main as brain_games_main
 from brain_games.games.brain_calc import main as brain_calc_main
 from brain_games.games.brain_prime import main as brain_prime_main
 from brain_games.games.brain_progression import main as brain_progression_main
 from brain_games.games.brain_even import main as brain_even_main
 from brain_games.games.brain_gcd import main as brain_gcd_main
 
+def main_games():
+    brain_games_main()
+    
 
 def main_calc():
     # Код для запуска игры brain_calc

@@ -18,6 +18,7 @@ prompt = "^0.4.1"
 pytest = "^7.3.1"
 
 [tool.poetry.scripts]
+brain-games = "brain_games.brain_file:main_games"
 brain-calc = "brain_games.brain_file:main_calc"
 brain-prime = "brain_games.brain_file:main_prime"
 brain-progression = "brain_games.brain_file:main_progression"
