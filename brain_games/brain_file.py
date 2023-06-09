@@ -6,9 +6,10 @@ from brain_games.games.brain_progression import main as brain_progression_main
 from brain_games.games.brain_even import main as brain_even_main
 from brain_games.games.brain_gcd import main as brain_gcd_main
 
+
 def main_games():
     brain_games_main()
-    
+
 
 def main_calc():
     # Код для запуска игры brain_calc
@@ -36,20 +37,23 @@ def main_gcd():
 
 
 if __name__ == '__main__':
-    # Проверяем переданное имя игры и запускаем соответствующую игру
+    available_games = {
+        'brain-calc': main_calc,
+        'brain-prime': main_prime,
+        'brain-progression': main_progression,
+        'brain-even': main_even,
+        'brain-gcd': main_gcd
+    }
+
     if len(sys.argv) < 2:
-        print("Не указана игра. Укажите одну из доступных игр: brain-calc, brain-prime, brain-progression, brain-even, brain-gcd")
+        print("""Не указана игра.
+        Укажите одну из доступных игр: brain-calc, brain-prime,
+        brain-progression, brain-even, brain-gcd""")
     else:
         game_name = sys.argv[1]
-        if game_name == 'brain-calc':
-            main_calc()
-        elif game_name == 'brain-prime':
-            main_prime()
-        elif game_name == 'brain-progression':
-            main_progression()
-        elif game_name == 'brain-even':
-            main_even()
-        elif game_name == 'brain-gcd':
-            main_gcd()
+        if game_name in available_games:
+            available_games[game_name]()
         else:
-            print("Неверное имя игры. Укажите одну из доступных игр: brain-calc, brain-prime, brain-progression, brain-even, brain-gcd")
+            print("""Неверное имя игры.
+            Укажите одну из доступных игр: brain-calc, brain-prime,
+            brain-progression, brain-even, brain-gcd""")
