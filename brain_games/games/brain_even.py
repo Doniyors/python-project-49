@@ -1,38 +1,20 @@
 #!/usr/bin/env python3
-import prompt
+from random import randint
 
-from brain_games.cli import welcome_user
-
-
-def main():
-    welcome_user()
-    name = prompt.string("May I have your name? ")
-    print(f"Hello, {name}!")
-    print('Answer "yes" if the number is even, otherwise answer "no".')
-    list_of_num = [15, 6, 7]
-
-    for i in list_of_num:
-        print(f'Question: {i}')
-        user_input = input("Your answer: ")
-        result = check_answer(user_input, i, name)
-        print(result)
-        if result != 'Correct!':
-            return
-    print('Congratulations, ' + name + '!')
+QUESTION = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
-def check_answer(answer, i, name):
-    if answer.lower() == "no" and i % 2 != 0:
-        return 'Correct!'
-    elif answer.lower() == "yes" and i % 2 == 0:
-        return 'Correct!'
-    elif answer.lower() == "no" and i % 2 == 0:
-        return f"""'{answer}' is wrong answer ;(. Correct answer was 'yes'.
-Let's try again, {name}!"""
-    elif answer.lower() == "yes" and i % 2 != 0:
-        return f"""'{answer}' is wrong answer ;(. Correct answer was 'yes'.
-Let's try again, {name}!"""
+def check_answer_and_question(num):
+    if num % 2 == 0:
+        answer1 = 'yes'
+        return answer1
+    else:
+        answer2 = 'no'
+        return answer2
 
 
-if __name__ == '__main__':
-    main()
+def right_answer_and_question():
+    list_of_nums = randint(1, 100)
+    answer1 = f'Question: {list_of_nums}'
+    question1 = check_answer_and_question(list_of_nums)
+    return question1, answer1
