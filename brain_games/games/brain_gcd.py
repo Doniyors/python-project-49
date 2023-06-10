@@ -1,34 +1,23 @@
-#!/usr/bin/env python3
-import prompt
-import random
-from brain_games.cli import welcome_user
+from random import randint
+from itertools import product
+
+QUESTION = 'Find the greatest common divisor of given numbers.'
+
+NUMBER_SPREAD = (1, 100)
 
 
-def find_gcd(a, b):  # Находит самое большую цифру на которую делятся оба числа
-    while b != 0:
-        a, b = b, a % b
-    return a
+def get_right_answer(num1: int, num2: int) -> str | None:
+    num1_divisors = [i for i in range(1, num1 + 1) if num1 % i == 0]
+    num2_divisors = [i for i in range(1, num2 + 1) if num2 % i == 0]
+
+    for div1, div2 in product(num1_divisors[::-1], num2_divisors):
+        if div1 == div2:
+            return str(div1)
 
 
-def main():
-    welcome_user()
-    name = prompt.string("May I have your name? ")
-    print(f"Hello, {name}!")
-    print('Find the greatest common divisor of given numbers.')
-    for _ in range(3):
-        random_number1 = random.randint(1, 100)
-        random_number2 = random.randint(1, 100)
-        gcd = find_gcd(random_number1, random_number2)
-        print(f'Question: {random_number1} {random_number2}')
-        user_input1 = input("Your answer: ")
-        if int(user_input1) == gcd:
-            print('Correct!')
-        else:
-            print(f"'{user_input1}' is wrong answer ;(.")
-            print(f"Correct answer was '{str(gcd)}'. Let's try again, {name}!")
-            return
-    print('Congratulations, ' + name + '!')
-
-
-if __name__ == '__main__':
-    main()
+def get_answer_and_question() -> tuple:
+    number1 = randint(*NUMBER_SPREAD)
+    number2 = randint(*NUMBER_SPREAD)
+    right_answer = get_right_answer(number1, number2)
+    task = (f'Question: {number1} {number2}')
+    return right_answer, task

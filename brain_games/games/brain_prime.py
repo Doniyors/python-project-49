@@ -1,53 +1,25 @@
-#!/usr/bin/env python3
-import prompt
-import random
-from brain_games.cli import welcome_user
+from math import sqrt
+from random import randint
+from brain_games.engine import NO, YES
 
 
-def is_prime(n):  # Проверяет является ли число простым или нет
-    if n < 2:
-        return False
-    for i in range(2, int(n**0.5) + 1):
-        if n % i == 0:
-            return False
-    return True
+QUESTION = (f'Answer "{YES}" if given number is prime. '
+            f'Otherwise answer "{NO}".')
+
+NUMBER_SPREAD = (1, 100)
 
 
-def generate_prime(name):
-    num = random.randint(2, 10)  # Генерируйте числа в нужном диапазоне
-    print(f'Question: {num}')
-    user_input1 = input("Your answer: ")
-    if is_prime(num) is True and user_input1.lower() == 'yes':
-        print('Correct!')
-    if is_prime(num) is False and user_input1.lower() == 'no':
-        print('Correct!')
-    if is_prime(num) is False and user_input1.lower() == 'yes':
-        print(f"'{user_input1}' is wrong answer ;(.")
-        print(f"Correct answer was 'yes'. Let's try again, {name}!")
-        return False
-    if is_prime(num) is True and user_input1.lower() == 'no':
-        print(f"'{user_input1}' is wrong answer ;(.")
-        print(f"Correct answer was 'yes'. Let's try again, {name}!")
-        return False
+def is_prime(num: int) -> str:
+    if num in [1, 2]:
+        return YES
+    for div in range(2, int(sqrt(num) + 1)):
+        if num % div == 0:
+            return NO
+    return YES
 
 
-def main():
-    welcome_user()
-    name = prompt.string("May I have your name? ")
-    print(f"Hello, {name}!")
-    print('Answer "yes" if given number is prime. Otherwise answer "no".')
-    for_congratulations = 0
-    for_congratulations_num_2 = 3
-    for _ in range(3):
-        if generate_prime(name) is False:
-            break
-        else:
-            for_congratulations += 1
-            continue
-
-    if for_congratulations == for_congratulations_num_2:
-        print("Congratulations, " + name + '!')
-
-
-if __name__ == '__main__':
-    main()
+def get_answer_and_question() -> tuple:
+    number = randint(*NUMBER_SPREAD)
+    right_answer = is_prime(number)
+    task = (f"Question: {number}")
+    return right_answer, task

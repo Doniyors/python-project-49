@@ -1,33 +1,28 @@
-import sys
-from brain_games.games.brain_games import main as brain_games_main
-from brain_games.games.brain_calc import main as brain_calc_main
-from brain_games.games.brain_prime import main as brain_prime_main
-from brain_games.games.brain_progression import main as brain_progression_main
-from brain_games.games.brain_even import main as brain_even_main
-from brain_games.games.brain_gcd import main as brain_gcd_main
+import prompt
 
-games = {
-    'brain-calc': brain_calc_main,
-    'brain-prime': brain_prime_main,
-    'brain-progression': brain_progression_main,
-    'brain-games': brain_games_main,
-    'brain-even': brain_even_main,
-    'brain-gcd': brain_gcd_main
-}
+YES = "yes"
+NO = "no"
 
 
-def main():
-    if len(sys.argv) < 2:
-        print("Не указана игра.")
-        return
+def start_game(game, games_num: int = 3):
 
-    game_name = sys.argv[1]
+    print('Welcome to the Brain Games!')
+    name = prompt.string("May I have your name? ")
+    print(f"Hello, {name}!")
 
-    if game_name in games:
-        games[game_name].run()
-    else:
-        print(f"Неверное имя игры: {game_name}")
+    print(game.QUESTION)
 
+    for _ in range(games_num):
+        right_answer, question = game.get_answer_and_question()
+        print(question)
+        user_answer = prompt.string('Your answer: ')
 
-if __name__ == '__main__':
-    main()
+        if user_answer.lower() != right_answer:
+            print(f"'{user_answer}' is wrong answer ;(.", end="")
+            print(f" Correct answer was '{right_answer}'.")
+            print(f"Let's try again, {name}!")
+            return
+
+        print('Correct!')
+
+    print(f"Congratulations, {name}!")

@@ -1,51 +1,26 @@
-#!/usr/bin/env python3
-import prompt
-import random
-from brain_games.cli import welcome_user
+from random import randint, choice
+
+QUESTION = "What is the result of the expression?"
+
+NUMBER_SPREAD = (1, 30)
+
+OPERATORS = ['+', '-', '*']
 
 
-def generate_numbers():
-    random_num1 = random.randint(1, 100)
-    random_num2 = random.randint(1, 100)
-    while random_num1 >= random_num2:
-        random_num1 = random.randint(1, 100)
-        random_num2 = random.randint(1, 100)
-    return random_num1, random_num2
+def get_right_answer(num1: int, num2: int, operator: str) -> str | None:
+    if operator == "*":
+        return str(num1 * num2)
+    elif operator == "-":
+        return str(num1 - num2)
+    elif operator == "+":
+        return str(num1 + num2)
 
 
-def calculate_result(random_num1, random_num2, operation):
-    if operation == '+':
-        return random_num1 + random_num2
-    elif operation == '-':
-        return random_num1 - random_num2
-    elif operation == '*':
-        return random_num1 * random_num2
+def get_answer_and_question() -> tuple:
+    operand1 = (randint(*NUMBER_SPREAD))
+    operand2 = (randint(*NUMBER_SPREAD))
+    operator = choice(OPERATORS)
+    right_answer = get_right_answer(operand1, operand2, operator)
+    task = f'Question: {operand1} {operator} {operand2}'
 
-
-def main():
-    welcome_user()
-    name = prompt.string("May I have your name? ")
-    print(f"Hello, {name}!")
-    print("What is the result of the expression?")
-
-    operations = ['+', '-', '*']
-    for _ in range(3):
-        random_num1, random_num2 = generate_numbers()
-        operation = random.choice(operations)
-        question = f"Question: {random_num1} {operation} {random_num2}"
-        user_answer = prompt.string(question + "\nYour answer: ")
-        expected_result = calculate_result(random_num1, random_num2, operation)
-
-        if int(user_answer) == expected_result:
-            print("Correct!")
-        else:
-            print(f"Sorry, '{user_answer}' is the wrong answer. "
-                  f"The correct answer is '{expected_result}'.")
-            print(f"Let's try again, {name}!")
-            return
-
-    print(f"Congratulations, {name}!")
-
-
-if __name__ == '__main__':
-    main()
+    return right_answer, task
