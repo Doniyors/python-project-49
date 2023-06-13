@@ -1,30 +1,3 @@
-<<<<<<< HEAD
-from random import randint
-
-
-QUESTION = "What number is missing in the progression?"
-PROGRESSION_START_SPREAD = (1, 50)
-PROGRESSION_STEP_SPREAD = (1, 10)
-PROGRESSION_LENGTH_SPREAD = (5, 10)
-
-
-def get_answer_and_question() -> tuple:
-    progression_start = randint(*PROGRESSION_START_SPREAD)
-    progression_step = randint(*PROGRESSION_STEP_SPREAD)
-    progression_length = randint(*PROGRESSION_LENGTH_SPREAD)
-    element_to_guess = randint(0, progression_length - 1)
-
-    element_of_progression = progression_start
-    progression = []
-    for _ in range(progression_length):
-        progression.append(str(element_of_progression))
-        element_of_progression += progression_step
-
-    right_answer = progression[element_to_guess]
-    progression[element_to_guess] = ".."
-    task = ("Question: " + " ".join(progression))
-    return right_answer, task
-=======
 #!/usr/bin/env python3
 import random
 
@@ -46,4 +19,3 @@ def right_answer_and_question():
     numbers[index_to_replace] = '..'
     question1 = 'Question: ' + ' '.join(str(num) for num in numbers)
     return str(answer1), question1
->>>>>>> my-branch
