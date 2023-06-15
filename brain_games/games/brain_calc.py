@@ -25,10 +25,8 @@ def calculate_result(random_num1, random_num2, operation):
 
 
 def right_answer_and_question():
-    for _ in range(3):
-        random_num1, random_num2 = generate_numbers()
-        operation = random.choice(operations)
-        question1 = f"Question: {random_num1} {operation} {random_num2}"
-        answer1 = calculate_result(random_num1, random_num2, operation)
-
-        return answer1, question1
+    random_num1, random_num2 = generate_numbers()
+    operation = random.choice(operations)
+    question1 = f"Question: {random_num1} {operation} {random_num2}"
+    answer1 = calculate_result(random_num1, random_num2, operation)
+    return answer1, question1
