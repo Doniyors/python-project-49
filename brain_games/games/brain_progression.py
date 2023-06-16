@@ -15,7 +15,7 @@ def random_function():
 def right_answer_and_question():
     _, index_to_replace, _, _ = random_function()
     numbers = give_question1()
-    answer1 = numbers[index_to_replace] # Значение которое нужно угадать
+    answer1 = numbers[index_to_replace]  # Значение которое нужно угадать
     numbers[index_to_replace] = '..'
     question1 = " ".join(str(num) for num in numbers)
     return question1, str(answer1)
