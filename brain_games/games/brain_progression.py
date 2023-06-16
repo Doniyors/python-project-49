@@ -17,5 +17,5 @@ def right_answer_and_question():
         numbers.append(new_number)
     answer1 = numbers[index_to_replace]  # Значение которое нужно угадать
     numbers[index_to_replace] = '..'
-    question1 = 'Question: ' + ' '.join(str(num) for num in numbers)
-    return str(answer1), question1
+    question1 = " ".join(str(num) for num in numbers)
+    return question1, str(answer1)

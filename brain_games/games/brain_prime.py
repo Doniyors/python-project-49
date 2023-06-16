@@ -16,6 +16,6 @@ def is_prime(n):  #  Функция проверяет является ли ч�
 
 def right_answer_and_question():
     num = random.randint(2, 10)
-    question1 = f'Question: {num}'
+    question1 = f'{num}'
     answer1= is_prime(num)
     return question1, 'yes' if answer1 else 'no'

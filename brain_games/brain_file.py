@@ -8,7 +8,7 @@ def start_game(game, games_num: int = 3):
     print(game.QUESTION)
     for _ in range(games_num):
         question1, answer1 = game.right_answer_and_question()
-        print(question1)
+        print(f'Question: {question1}')
         user_answer = prompt.string('Your answer: ')
         if user_answer.lower() != answer1:
             print(f"'{user_answer}' is wrong answer ;(.", end="")
