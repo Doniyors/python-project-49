@@ -4,6 +4,8 @@ import random
 
 QUESTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
+NUM1 = (2, 10)
+
 
 def is_prime(n):  # Функция проверяет является ли число простым или нет
     if n < 2:
@@ -15,7 +17,7 @@ def is_prime(n):  # Функция проверяет является ли чи
 
 
 def right_answer_and_question():
-    num = random.randint(2, 10)
+    num = random.randint(*NUM1)
     question1 = f'{num}'
     answer1 = is_prime(num)
     return question1, 'yes' if answer1 else 'no'

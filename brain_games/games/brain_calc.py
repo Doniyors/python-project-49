@@ -5,10 +5,13 @@ operations = ['+', '-', '*']
 
 QUESTION = "What is the result of the expression?"
 
+RANDOM_NUM11 = (1, 100)
+RANDOM_NUM22 = (1, 100)
+
 
 def generate_numbers():
-    random_num1 = random.randint(1, 100)
-    random_num2 = random.randint(1, 100)
+    random_num1 = random.randint(*RANDOM_NUM11)
+    random_num2 = random.randint(*RANDOM_NUM22)
     while random_num1 <= random_num2:
         random_num1 = random.randint(1, 100)
         random_num2 = random.randint(1, 100)
