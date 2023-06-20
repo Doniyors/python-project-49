@@ -3,33 +3,33 @@ import random
 
 operations = ['+', '-', '*']
 
-QUESTION = "What is the result of the expression?"
+GAME_RULES = "What is the result of the expression?"
 
-RANDOM_NUM11 = (1, 100)
-RANDOM_NUM22 = (1, 100)
+FIRST_RANDOM_NUMBER = (1, 100)
+SECOND_RANDOM_NUMBER = (1, 100)
 
 
 def generate_numbers():
-    random_num1 = random.randint(*RANDOM_NUM11)
-    random_num2 = random.randint(*RANDOM_NUM22)
-    while random_num1 <= random_num2:
-        random_num1 = random.randint(1, 100)
-        random_num2 = random.randint(1, 100)
-    return random_num1, random_num2
+    first_number = random.randint(*FIRST_RANDOM_NUMBER)
+    second_number = random.randint(*SECOND_RANDOM_NUMBER)
+    while first_number <= second_number:
+        first_number = random.randint(1, 100)
+        second_number = random.randint(1, 100)
+    return first_number, second_number
 
 
-def calculate_result(random_num1, random_num2, operation):
+def calculate_result(first_number, second_number, operation):
     if operation == '+':
-        return str(random_num1 + random_num2)
+        return str(first_number + second_number)
     elif operation == '-':
-        return str(random_num1 - random_num2)
+        return str(first_number - second_number)
     elif operation == '*':
-        return str(random_num1 * random_num2)
+        return str(first_number * second_number)
 
 
-def right_answer_and_question():
-    random_num1, random_num2 = generate_numbers()
+def get_answer_and_question():
+    first_number, second_number = generate_numbers()
     operation = random.choice(operations)
-    question1 = f"{random_num1} {operation} {random_num2}"
-    answer1 = calculate_result(random_num1, random_num2, operation)
-    return question1, answer1
+    question = f"{first_number} {operation} {second_number}"
+    answer = calculate_result(first_number, second_number, operation)
+    return question, answer

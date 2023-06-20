@@ -2,9 +2,9 @@
 import random
 
 
-QUESTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+GAME_RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
-NUM1 = (2, 10)
+RANDOM_NUMBER = (2, 10)
 
 
 def is_prime(n):  # Функция проверяет является ли число простым или нет
@@ -16,8 +16,8 @@ def is_prime(n):  # Функция проверяет является ли чи
     return True
 
 
-def right_answer_and_question():
-    num = random.randint(*NUM1)
-    question1 = f'{num}'
-    answer1 = is_prime(num)
-    return question1, 'yes' if answer1 else 'no'
+def get_answer_and_question():
+    num = random.randint(*RANDOM_NUMBER)
+    question = f'{num}'
+    answer = is_prime(num)
+    return question, 'yes' if answer else 'no'
