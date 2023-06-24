@@ -5,13 +5,13 @@ operations = ['+', '-', '*']
 
 GAME_RULES = "What is the result of the expression?"
 
-FIRST_RANDOM_NUMBER = (1, 100)
-SECOND_RANDOM_NUMBER = (1, 100)
+FIRST_DIGIT_INTERVAL = (1, 100)
+SECOND_DIGIT_INTERVAL = (1, 100)
 
 
 def generate_numbers():
-    first_number = random.randint(*FIRST_RANDOM_NUMBER)
-    second_number = random.randint(*SECOND_RANDOM_NUMBER)
+    first_number = random.randint(*FIRST_DIGIT_INTERVAL)
+    second_number = random.randint(*SECOND_DIGIT_INTERVAL)
     while first_number <= second_number:
         first_number = random.randint(1, 100)
         second_number = random.randint(1, 100)

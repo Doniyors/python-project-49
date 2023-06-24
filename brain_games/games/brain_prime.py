@@ -4,7 +4,7 @@ import random
 
 GAME_RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
-RANDOM_NUMBER = (2, 10)
+DIGIT_INTERVAL = (2, 10)
 
 
 def is_prime(n):  # Функция проверяет является ли число простым или нет
@@ -17,7 +17,7 @@ def is_prime(n):  # Функция проверяет является ли чи
 
 
 def get_answer_and_question():
-    num = random.randint(*RANDOM_NUMBER)
+    num = random.randint(*DIGIT_INTERVAL)
     question = f'{num}'
     answer = is_prime(num)
     return question, 'yes' if answer else 'no'
